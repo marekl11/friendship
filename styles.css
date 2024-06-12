@@ -8,20 +8,29 @@ body {
     background-color: #f8f9fa;
     text-align: center;
     padding: 0 10px;
+    overflow: hidden; /* Prevents scrollbars during animation */
 }
+
 .message {
     font-size: 4em;
     font-weight: bold;
-    color: #333;
     white-space: pre-line;
+    position: relative;
+    z-index: 1;
 }
+
 .circle {
+    display: none;
     position: absolute;
     width: 100px;
     height: 100px;
     background-color: #000;
     border-radius: 50%;
-    animation: scaleUp 15s forwards;
+    animation: scaleUp 2s forwards;
+}
+
+.unlocked .circle {
+    display: block;
 }
 
 @keyframes scaleUp {

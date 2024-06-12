@@ -29,9 +29,13 @@ function getProgress() {
 
 function checkAccess(orderNumber) {
     var progress = getProgress();
+    var messageElement = document.getElementById("message");
     if (progress < orderNumber) {
-        document.getElementById("message").innerHTML = "We are\n not so far\n into our\n friendship";
+        messageElement.innerHTML = "We are\n not so far\n into our\n friendship";
+        messageElement.style.color = "#333"; // Black text for locked state
     } else {
+        document.body.classList.add("unlocked");
+        messageElement.style.color = "white"; // White text for unlocked state
         document.getElementById("content").style.display = "block";
         if (progress < orderNumber + 1) {
             setCookie("progress", orderNumber + 1, 365);
