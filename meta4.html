@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stage 2</title>
+    <title>Meta 4</title>
     <link rel="icon" href="favicon_meta.png" type="image/png">
     <script src="cookie.js"></script>
     <script>
         function checkAccess() {
             var progress = getProgress();
-            if (progress < 1) {
+            if (progress < 2) {
                 document.getElementById("message").innerHTML = "We are not so far into our friendship";
             } else {
                 document.getElementById("content").style.display = "block";
-                if (progress < 2) {
-                    setCookie("progress", 2, 365);
+                if (progress < 3) {
+                    setCookie("progress", 3, 365);
                 }
             }
         }
@@ -23,8 +23,8 @@
 <body>
     <div id="message"></div>
     <div id="content" style="display: none;">
-        <h1>Stage 2: Getting to Know Each Other</h1>
-        <p>Here is some entertaining content.</p>
+        <h1>Stage 3: Deepening the Bond</h1>
+        <p>More entertaining content.</p>
     </div>
 </body>
 </html>
