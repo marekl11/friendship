@@ -15,3 +15,20 @@ body {
     color: #333;
     white-space: pre-line;
 }
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: scaleUp 15s forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(100);
+    }
+}
