@@ -18,3 +18,11 @@ function getCookie(name) {
     }
     return null;
 }
+
+function getProgress() {
+    var progress = getCookie("progress");
+    if (progress === null) {
+        return 0;
+    }
+    return parseInt(progress, 10);
+}
