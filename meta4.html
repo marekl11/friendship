@@ -3,25 +3,16 @@
 <head>
     <title>Meta 4</title>
     <link rel="icon" href="favicon_meta.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
     <script src="cookie.js"></script>
     <script>
-        function checkAccess() {
-            var progress = getProgress();
-            if (progress < 2) {
-                document.getElementById("message").innerHTML = "We are not so far into our friendship";
-            } else {
-                document.getElementById("content").style.display = "block";
-                if (progress < 3) {
-                    setCookie("progress", 3, 365);
-                }
-            }
-        }
-
-        window.onload = checkAccess;
+        window.onload = function() {
+            checkAccess(2);
+        };
     </script>
 </head>
 <body>
-    <div id="message"></div>
+    <div id="message" class="message"></div>
     <div id="content" style="display: none;">
         <h1>Stage 3: Deepening the Bond</h1>
         <p>More entertaining content.</p>

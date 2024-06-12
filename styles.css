@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 0 10px;
+}
+.message {
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;
+    white-space: pre-line;
+}

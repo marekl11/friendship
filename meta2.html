@@ -3,21 +3,12 @@
 <head>
     <title>Meta 2</title>
     <link rel="icon" href="favicon_meta.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
     <script src="cookie.js"></script>
     <script>
-        function checkAccess() {
-            var progress = getProgress();
-            if (progress < 0) {
-                document.getElementById("message").innerHTML = "We are not so far into our friendship";
-            } else {
-                document.getElementById("content").style.display = "block";
-                if (progress < 1) {
-                    setCookie("progress", 1, 365);
-                }
-            }
-        }
-
-        window.onload = checkAccess;
+        window.onload = function() {
+            checkAccess(0);
+        };
     </script>
 </head>
 <body>

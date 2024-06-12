@@ -26,3 +26,15 @@ function getProgress() {
     }
     return parseInt(progress, 10);
 }
+
+function checkAccess(orderNumber) {
+    var progress = getProgress();
+    if (progress < orderNumber) {
+        document.getElementById("message").innerHTML = "We are\n not so far\n into our\n friendship";
+    } else {
+        document.getElementById("content").style.display = "block";
+        if (progress < orderNumber + 1) {
+            setCookie("progress", orderNumber + 1, 365);
+        }
+    }
+}
