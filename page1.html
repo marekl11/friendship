@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stage 1</title>
+    <script src="cookie.js"></script>
+    <script>
+        function checkAccess() {
+            var progress = getCookie("progress");
+            if (progress != null && progress >= 1) {
+                document.getElementById("message").innerHTML = "We are not so far into our friendship";
+            } else {
+                setCookie("progress", 1, 365);
+            }
+        }
+
+        window.onload = checkAccess;
+    </script>
+</head>
+<body>
+    <div id="message">
+        <h1>Stage 1: First Meeting</h1>
+        <p>Welcome to the beginning of a new friendship.</p>
+    </div>
+</body>
+</html>
