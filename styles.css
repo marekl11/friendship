@@ -16,7 +16,7 @@ body {
     font-weight: bold;
     white-space: pre-line;
     position: relative;
-    z-index: 1;
+    z-index: 2; /* Ensure message is above the circle */
 }
 
 .circle {
@@ -26,11 +26,18 @@ body {
     height: 100px;
     background-color: #000;
     border-radius: 50%;
-    animation: scaleUp 2s forwards;
+    animation: scaleUp 15s forwards;
+    z-index: 1; /* Ensure circle is behind the text */
 }
 
 .unlocked .circle {
     display: block;
+}
+
+.unlocked .message,
+.unlocked #content {
+    color: white; /* Set text color to white for unlocked state */
+    z-index: 2; /* Ensure content is above the circle */
 }
 
 @keyframes scaleUp {
