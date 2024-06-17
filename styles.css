@@ -26,7 +26,7 @@ body {
     height: 100px;
     background-color: #000;
     border-radius: 50%;
-    animation: scaleUp 10s forwards;
+    animation: scaleUp 20s forwards;
     z-index: 1; /* Ensure circle is behind the text */
 }
 
