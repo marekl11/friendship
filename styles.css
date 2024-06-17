@@ -5,14 +5,15 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     text-align: center;
     padding: 0 10px;
     overflow: hidden; /* Prevents scrollbars during animation */
+    flex-direction: column; /* Ensures vertical alignment */
 }
 
 .message {
-    font-size: 6em;
+    font-size: 4em;
     font-weight: bold;
     white-space: pre-line;
     position: relative;
@@ -26,7 +27,7 @@ body {
     height: 100px;
     background-color: #000;
     border-radius: 50%;
-    animation: scaleUp 20s forwards;
+    animation: scaleUp 15s forwards;
     z-index: 1; /* Ensure circle is behind the text */
 }
 
@@ -47,4 +48,22 @@ body {
     100% {
         transform: scale(100);
     }
+}
+
+/* Centering and scaling video */
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: auto;
+    width: 100%;
+}
+
+iframe {
+    width: 80%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
