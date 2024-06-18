@@ -70,5 +70,5 @@ iframe {
 
 /* Adaptive font size for h1 */
 h1 {
-    font-size: 7vw; /* Base font size using viewport units */
+    font-size: calc(10px + 2vw); /* Adjust the base size (10px) and the scaling factor (2vw) as needed */
 }
