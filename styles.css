@@ -70,8 +70,9 @@ iframe {
 
 /* Adaptive font size for h1 */
 h1 {
-    width: 60%; /* Make h1 take up 80% of the screen width */
-    font-size: 8vw; /* Base font size using viewport width */
+    width: 70%; /* Make h1 take up 80% of the screen width */
+    font-size: 9vw; /* Base font size using viewport width */
+    font-style: italic;
     word-wrap: normal; /* Allow breaking long words to fit the width */
     text-align: center; /* Center-align the text */
     margin: 0 auto; /* Center the h1 element horizontally */
