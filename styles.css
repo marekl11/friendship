@@ -67,3 +67,8 @@ iframe {
     height: auto;
     aspect-ratio: 16 / 9;
 }
+
+/* Adaptive font size for h1 */
+h1 {
+    font-size: 5vw; /* Base font size using viewport units */
+}
